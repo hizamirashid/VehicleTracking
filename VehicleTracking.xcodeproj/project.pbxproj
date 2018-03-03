@@ -13,6 +13,11 @@
 		D176BB13204900A90027ED43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D176BB11204900A90027ED43 /* Main.storyboard */; };
 		D176BB15204900A90027ED43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D176BB14204900A90027ED43 /* Assets.xcassets */; };
 		D176BB18204900A90027ED43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D176BB16204900A90027ED43 /* LaunchScreen.storyboard */; };
+		D176BB20204904FA0027ED43 /* CustomMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D176BB1F204904FA0027ED43 /* CustomMarkerView.swift */; };
+		D176BB22204A293E0027ED43 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D176BB21204A293D0027ED43 /* GoogleService-Info.plist */; };
+		D176BB27204A33470027ED43 /* Vehicle_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = D176BB24204A33470027ED43 /* Vehicle_Base.swift */; };
+		D176BB28204A33470027ED43 /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D176BB25204A33470027ED43 /* Vehicles.swift */; };
+		D176BB29204A33470027ED43 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = D176BB26204A33470027ED43 /* Coordinates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		D176BB14204900A90027ED43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D176BB17204900A90027ED43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D176BB19204900A90027ED43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D176BB1F204904FA0027ED43 /* CustomMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarkerView.swift; sourceTree = "<group>"; };
+		D176BB21204A293D0027ED43 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D176BB24204A33470027ED43 /* Vehicle_Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle_Base.swift; sourceTree = "<group>"; };
+		D176BB25204A33470027ED43 /* Vehicles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicles.swift; sourceTree = "<group>"; };
+		D176BB26204A33470027ED43 /* Coordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,14 +88,27 @@
 		D176BB0C204900A80027ED43 /* VehicleTracking */ = {
 			isa = PBXGroup;
 			children = (
+				D176BB23204A32B80027ED43 /* Model */,
 				D176BB0D204900A90027ED43 /* AppDelegate.swift */,
 				D176BB0F204900A90027ED43 /* ViewController.swift */,
 				D176BB11204900A90027ED43 /* Main.storyboard */,
 				D176BB14204900A90027ED43 /* Assets.xcassets */,
 				D176BB16204900A90027ED43 /* LaunchScreen.storyboard */,
 				D176BB19204900A90027ED43 /* Info.plist */,
+				D176BB21204A293D0027ED43 /* GoogleService-Info.plist */,
+				D176BB1F204904FA0027ED43 /* CustomMarkerView.swift */,
 			);
 			path = VehicleTracking;
+			sourceTree = "<group>";
+		};
+		D176BB23204A32B80027ED43 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D176BB26204A33470027ED43 /* Coordinates.swift */,
+				D176BB24204A33470027ED43 /* Vehicle_Base.swift */,
+				D176BB25204A33470027ED43 /* Vehicles.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D176BB22204A293E0027ED43 /* GoogleService-Info.plist in Resources */,
 				D176BB18204900A90027ED43 /* LaunchScreen.storyboard in Resources */,
 				D176BB15204900A90027ED43 /* Assets.xcassets in Resources */,
 				D176BB13204900A90027ED43 /* Main.storyboard in Resources */,
@@ -186,11 +210,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-VehicleTracking/Pods-VehicleTracking-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GooglePlacesPicker/GooglePlacesPicker.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GooglePlacesPicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -224,6 +252,10 @@
 			files = (
 				D176BB10204900A90027ED43 /* ViewController.swift in Sources */,
 				D176BB0E204900A90027ED43 /* AppDelegate.swift in Sources */,
+				D176BB20204904FA0027ED43 /* CustomMarkerView.swift in Sources */,
+				D176BB29204A33470027ED43 /* Coordinates.swift in Sources */,
+				D176BB28204A33470027ED43 /* Vehicles.swift in Sources */,
+				D176BB27204A33470027ED43 /* Vehicle_Base.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +396,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6RD89G5GCK;
 				INFOPLIST_FILE = VehicleTracking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hizamirashid.VehicleTracking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -380,6 +413,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6RD89G5GCK;
 				INFOPLIST_FILE = VehicleTracking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hizamirashid.VehicleTracking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
