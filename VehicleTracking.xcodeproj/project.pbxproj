@@ -18,6 +18,7 @@
 		D176BB27204A33470027ED43 /* Vehicle_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = D176BB24204A33470027ED43 /* Vehicle_Base.swift */; };
 		D176BB28204A33470027ED43 /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D176BB25204A33470027ED43 /* Vehicles.swift */; };
 		D176BB29204A33470027ED43 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = D176BB26204A33470027ED43 /* Coordinates.swift */; };
+		D176BB2C204A57010027ED43 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = D176BB2B204A57010027ED43 /* Artwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		D176BB24204A33470027ED43 /* Vehicle_Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle_Base.swift; sourceTree = "<group>"; };
 		D176BB25204A33470027ED43 /* Vehicles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicles.swift; sourceTree = "<group>"; };
 		D176BB26204A33470027ED43 /* Coordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
+		D176BB2B204A57010027ED43 /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		D176BB0C204900A80027ED43 /* VehicleTracking */ = {
 			isa = PBXGroup;
 			children = (
+				D176BB2A204A56EE0027ED43 /* Custom Class */,
 				D176BB23204A32B80027ED43 /* Model */,
 				D176BB0D204900A90027ED43 /* AppDelegate.swift */,
 				D176BB0F204900A90027ED43 /* ViewController.swift */,
@@ -109,6 +112,14 @@
 				D176BB25204A33470027ED43 /* Vehicles.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		D176BB2A204A56EE0027ED43 /* Custom Class */ = {
+			isa = PBXGroup;
+			children = (
+				D176BB2B204A57010027ED43 /* Artwork.swift */,
+			);
+			path = "Custom Class";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +263,7 @@
 			files = (
 				D176BB10204900A90027ED43 /* ViewController.swift in Sources */,
 				D176BB0E204900A90027ED43 /* AppDelegate.swift in Sources */,
+				D176BB2C204A57010027ED43 /* Artwork.swift in Sources */,
 				D176BB20204904FA0027ED43 /* CustomMarkerView.swift in Sources */,
 				D176BB29204A33470027ED43 /* Coordinates.swift in Sources */,
 				D176BB28204A33470027ED43 /* Vehicles.swift in Sources */,

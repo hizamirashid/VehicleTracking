@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     
     var ref: DatabaseReference?
     var handle: DatabaseHandle?
+    var vehiclesArr: [Vehicles]! = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +42,25 @@ class ViewController: UIViewController {
         // Firebase initialization
         ref = Database.database().reference()
         
-        handle = ref?.child("vehicles").observe(.childAdded, with: { (snapshots) in
+        ref?.child("vehicles").observe(.value, with: { (snapshots) in
             
-            if let data = snapshots.value {
-                guard let vehicles = Vehicle_Base(dictionary: data as! NSDictionary) else { return }
-                print(vehicles)
+            for item in snapshots.children {
+                let child = item as! DataSnapshot
+                let dict = child.value as! NSDictionary
+                let vehicle = Vehicles(dictionary: dict)
+                self.vehiclesArr.append(vehicle!)
             }
+            
+            print(self.vehiclesArr[0].name)
+            
         })
+        
+        // show artwork on map
+        for item in vehiclesArr {
+            let artwork = Artwork(locationName: item.name as! String,
+                                  coordinate: CLLocationCoordinate2D(latitude: item.coordinates![0].latitude as! CLLocationDegrees, longitude: item.coordinates![0].longitude as! CLLocationDegrees))
+            theMap.addAnnotation(artwork)
+        }
         
     }
     
@@ -64,7 +77,7 @@ extension ViewController: CLLocationManagerDelegate, MKMapViewDelegate{
         let spanX = 0.007
         let spanY = 0.007
         let newRegion = MKCoordinateRegion(center: theMap.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))
-        theMap.setRegion(newRegion, animated: true)
+//        theMap.setRegion(newRegion, animated: true)
         
         if (myLocations.count > 1){
             let sourceIndex = myLocations.count - 1
