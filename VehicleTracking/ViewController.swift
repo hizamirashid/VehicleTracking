@@ -86,7 +86,7 @@ class ViewController: UIViewController {
     }
     
     func setupViews() {
-        vehiclePreviewView = VehiclePreviewView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width-16, height: 190))
+        vehiclePreviewView = VehiclePreviewView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width-16, height: 150))
     }
     
     override func didReceiveMemoryWarning() {
@@ -161,7 +161,7 @@ extension ViewController: CLLocationManagerDelegate, GMSMapViewDelegate {
 //        let lat = (location?.coordinate.latitude)!
 //        let long = (location?.coordinate.longitude)!
         
-        showPartyMarkers()
+//        showPartyMarkers()
     }
     
     // MARK: GOOGLE MAP DELEGATE
