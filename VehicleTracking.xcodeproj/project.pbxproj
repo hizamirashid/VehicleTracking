@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		380E453B3C94082704C70FDB /* Pods_VehicleTracking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2F20C249FC64CF38BA50D7 /* Pods_VehicleTracking.framework */; };
+		D14BF630204DB42F00817272 /* VehiclePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF62F204DB42F00817272 /* VehiclePreviewView.swift */; };
+		D14BF635204DDD7A00817272 /* TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF634204DDD7A00817272 /* TimeAgo.swift */; };
+		D14BF638204DE13F00817272 /* Extension+CGFloat+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF637204DE13F00817272 /* Extension+CGFloat+UIColor.swift */; };
 		D176BB0E204900A90027ED43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D176BB0D204900A90027ED43 /* AppDelegate.swift */; };
 		D176BB10204900A90027ED43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D176BB0F204900A90027ED43 /* ViewController.swift */; };
 		D176BB13204900A90027ED43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D176BB11204900A90027ED43 /* Main.storyboard */; };
@@ -25,6 +28,9 @@
 		4A061F3B31BCD58E48E85422 /* Pods-VehicleTracking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VehicleTracking.release.xcconfig"; path = "Pods/Target Support Files/Pods-VehicleTracking/Pods-VehicleTracking.release.xcconfig"; sourceTree = "<group>"; };
 		4C40F2F2C728CFAD1C18289C /* Pods-VehicleTracking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VehicleTracking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VehicleTracking/Pods-VehicleTracking.debug.xcconfig"; sourceTree = "<group>"; };
 		4D2F20C249FC64CF38BA50D7 /* Pods_VehicleTracking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VehicleTracking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D14BF62F204DB42F00817272 /* VehiclePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclePreviewView.swift; sourceTree = "<group>"; };
+		D14BF634204DDD7A00817272 /* TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAgo.swift; sourceTree = "<group>"; };
+		D14BF637204DE13F00817272 /* Extension+CGFloat+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+CGFloat+UIColor.swift"; sourceTree = "<group>"; };
 		D176BB0A204900A80027ED43 /* VehicleTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VehicleTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D176BB0D204900A90027ED43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D176BB0F204900A90027ED43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +75,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D14BF636204DE12200817272 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D14BF637204DE13F00817272 /* Extension+CGFloat+UIColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D176BB01204900A80027ED43 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +104,7 @@
 		D176BB0C204900A80027ED43 /* VehicleTracking */ = {
 			isa = PBXGroup;
 			children = (
+				D14BF636204DE12200817272 /* Extensions */,
 				D176BB2A204A56EE0027ED43 /* Custom Class */,
 				D176BB23204A32B80027ED43 /* Model */,
 				D176BB0D204900A90027ED43 /* AppDelegate.swift */,
@@ -99,7 +114,6 @@
 				D176BB16204900A90027ED43 /* LaunchScreen.storyboard */,
 				D176BB19204900A90027ED43 /* Info.plist */,
 				D176BB21204A293D0027ED43 /* GoogleService-Info.plist */,
-				D176BB1F204904FA0027ED43 /* CustomMarkerView.swift */,
 			);
 			path = VehicleTracking;
 			sourceTree = "<group>";
@@ -118,6 +132,9 @@
 			isa = PBXGroup;
 			children = (
 				D176BB2B204A57010027ED43 /* Artwork.swift */,
+				D176BB1F204904FA0027ED43 /* CustomMarkerView.swift */,
+				D14BF62F204DB42F00817272 /* VehiclePreviewView.swift */,
+				D14BF634204DDD7A00817272 /* TimeAgo.swift */,
 			);
 			path = "Custom Class";
 			sourceTree = "<group>";
@@ -267,7 +284,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D14BF630204DB42F00817272 /* VehiclePreviewView.swift in Sources */,
+				D14BF638204DE13F00817272 /* Extension+CGFloat+UIColor.swift in Sources */,
 				D176BB10204900A90027ED43 /* ViewController.swift in Sources */,
+				D14BF635204DDD7A00817272 /* TimeAgo.swift in Sources */,
 				D176BB0E204900A90027ED43 /* AppDelegate.swift in Sources */,
 				D176BB2C204A57010027ED43 /* Artwork.swift in Sources */,
 				D176BB20204904FA0027ED43 /* CustomMarkerView.swift in Sources */,
