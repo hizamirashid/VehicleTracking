@@ -17,20 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JT9-Px-oJq">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JT9-Px-oJq" customClass="GMSMapView">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <subviews>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LNV-nG-UzY">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                                    </mapView>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="LNV-nG-UzY" firstAttribute="leading" secondItem="JT9-Px-oJq" secondAttribute="leading" id="Lal-DC-lgh"/>
-                                    <constraint firstItem="LNV-nG-UzY" firstAttribute="top" secondItem="JT9-Px-oJq" secondAttribute="top" id="Pnz-W2-bZ9"/>
-                                    <constraint firstAttribute="bottom" secondItem="LNV-nG-UzY" secondAttribute="bottom" id="X9C-gb-xkt"/>
-                                    <constraint firstAttribute="trailing" secondItem="LNV-nG-UzY" secondAttribute="trailing" id="tGZ-dC-x4v"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -43,7 +32,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="theMap" destination="LNV-nG-UzY" id="yu4-EM-V1z"/>
+                        <outlet property="googleMapView" destination="JT9-Px-oJq" id="srh-fd-Yhz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

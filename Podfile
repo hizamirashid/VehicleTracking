@@ -6,6 +6,11 @@ target 'VehicleTracking' do
   use_frameworks!
 
   # Pods for VehicleTracking
+	pod 'GooglePlaces'
+	pod 'GooglePlacesPicker'
+	pod 'GoogleMaps'
     pod 'Firebase/Core'
     pod 'Firebase/Database'
+    pod 'Alamofire'
+    pod 'SwiftyJSON'
 end
