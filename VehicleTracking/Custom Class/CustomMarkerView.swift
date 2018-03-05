@@ -29,6 +29,7 @@ class CustomMarkerView: UIView {
         imgView.layer.cornerRadius = 40
         imgView.layer.borderColor=borderColor?.cgColor
         imgView.layer.borderWidth=6
+        imgView.backgroundColor = .white
         imgView.clipsToBounds=true
         let lbl=UILabel(frame: CGRect(x: 0, y: 75, width: 80, height: 10))
         lbl.text = "▾"
